@@ -11,9 +11,6 @@ document.getElementById('cardDiscord')?.addEventListener('click', (e) => {
     }, 1000);
 })
 
-console.log(navigator.userAgent)
-
-
 const circleCursor = document.querySelector('.circleCursor');
 if (circleCursor) {
     const mouse = { x: 0, y: 0 };
