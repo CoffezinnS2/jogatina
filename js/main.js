@@ -1,3 +1,8 @@
+require('dotenv').config();
+
+const bola = process.env.BOLA;
+console.log(bola)
+
 document.getElementById('cardDiscord')?.addEventListener('click', (e) => {
     const { mouseX, mouseY } = angle(e, cardDiscord);
     let ripples = document.createElement('span');
@@ -61,8 +66,6 @@ const tick = () => {
     window.requestAnimationFrame(tick);
 }
 tick();
-
-console.log(BOLA)
 
 function angle(e, element) {
     const rect = element.getBoundingClientRect();
