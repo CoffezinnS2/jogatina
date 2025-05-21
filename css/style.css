@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
 * {
     padding: 0px;
     margin: 0px;
@@ -6,7 +8,6 @@
 
 /* paleta de cores */
 :root {
-
     --bgWhite: #F2F5F2;
     --mainColor: #F2691A;
     --toAttention: #DFA160;
@@ -29,7 +30,6 @@
     /*rgb(63, 166, 137)*/
     --greenDark: 63, 166, 137;
     /**/
-
 }
 
 /* Personaliza a barra de rolagem */
@@ -54,10 +54,9 @@
 }
 
 body {
-    /* background-color: var(--Chocolate); */
     background: linear-gradient(135deg,
             var(--bgBlack), var(--bgBlack2));
-    font-family: Arial, sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 nav {
@@ -67,7 +66,7 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    height: 5em;
+    height: 3.5em;
     z-index: 2;
     cursor: default;
     pointer-events: visible;
@@ -80,16 +79,13 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-nav a {
+nav a,
+.divLogo>div>p {
     text-decoration: none;
     color: var(--font-white);
     font-weight: 600;
+    font-size: 1.4em;
 }
-
-nav a {
-    font-size: 1.8em;
-}
-
 
 nav a:hover {
     filter: brightness(0.85);
@@ -97,6 +93,30 @@ nav a:hover {
 
 nav>* {
     display: flex;
+}
+
+.divLogo {
+    align-items: center;
+    margin-left: 3em;
+    height: 100%;
+}
+
+.divLogo>div>p {
+    display: flex;
+    margin-left: .5em;
+    font-size: 2.0em;
+    text-transform: uppercase;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .pages {
@@ -112,16 +132,8 @@ nav>* {
     border-left: 1px rgb(255, 255, 255, .2) solid;
 }
 
-.logo img {
-    margin-left: 3em;
-    width: 2em;
-    border-radius: 50%;
-}
-
 /*===========================================================================*/
-
 /* globais */
-
 h1 {
     font-size: 2.5em;
     color: var(--font-white);
@@ -142,6 +154,7 @@ h1 {
 .circleCursor {
     --circle-size: 40px;
     position: fixed;
+    z-index: 2;
     width: var(--circle-size);
     height: var(--circle-size);
     border: 1px solid white;
@@ -389,9 +402,7 @@ h1 {
 
     justify-content: center;
     align-self: center;
-    /* alinha o botão ao meio */
     align-items: center;
-    /* alinha o texto do botão ao meio */
 
     width: 5em;
     height: 2.5em;
@@ -472,8 +483,9 @@ footer p {
 
 @media (max-width: 1245px) {
     .bloco {
-    width: 10em;
+        width: 10em;
     }
+
     .main {
         padding: 10% 10%;
     }
@@ -484,7 +496,6 @@ footer p {
     }
 }
 
-/* Estilo entre 769px e 1023px */
 @media (min-width: 769px) and (max-width: 1023px) {
     .pages {
         height: 100%;
@@ -531,6 +542,7 @@ footer p {
 }
 
 @media (max-width: 610px) {
+
     /* home */
     .mainHome h1 {
         font-size: 2.5em;
@@ -548,7 +560,7 @@ footer p {
     .logo img {
         margin-left: .5em;
     }
-    
+
     nav a {
         font-size: 1em;
     }
