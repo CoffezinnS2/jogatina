@@ -99,11 +99,11 @@ nav>* {
     align-items: center;
     margin-left: 3em;
     height: 100%;
+    gap: 1.2em;
 }
 
 .divLogo>div>p {
     display: flex;
-    margin-left: .5em;
     font-size: 2.0em;
     text-transform: uppercase;
 }
@@ -532,6 +532,11 @@ footer p {
     }
 
     /* desc */
+
+    .divLogo>div>p {
+        display: none;
+    }
+
     .listCmds p:nth-child(2) {
         padding: 0em 0.5em;
     }
@@ -554,7 +559,7 @@ footer p {
     }
 
     .bloco {
-        width: 5.5em;
+        width: 5.2em;
     }
 
     .logo img {
@@ -563,6 +568,15 @@ footer p {
 
     nav a {
         font-size: 1em;
+    }
+
+    .divLogo {
+        margin-left: 4%;
+        gap: 0;
+    }
+
+    .divLogo>div>p {
+        display: none;
     }
 
     .main {

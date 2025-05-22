@@ -1,8 +1,3 @@
-require('dotenv').config();
-
-const bola = process.env.BOLA;
-console.log(bola)
-
 document.getElementById('cardDiscord')?.addEventListener('click', (e) => {
     const { mouseX, mouseY } = angle(e, cardDiscord);
     let ripples = document.createElement('span');
@@ -48,9 +43,7 @@ const tick = () => {
     const angle = Math.atan2(deltaMouseY, deltaMouseX) * 180 / Math.PI;
 
     if (mouseVelocity > 20) currentAngle = angle;
-
     const links = document.querySelectorAll('a');
-
     links.forEach(link => {
         link.addEventListener('mouseenter', () => {
             circleCursor.style.setProperty('--circle-size', '80px');
@@ -59,9 +52,7 @@ const tick = () => {
             circleCursor.style.setProperty('--circle-size', '40px');
         });
     });
-
     const rotateTransform = `rotate(${angle}deg)`;
-
     circleCursor.style.transform = `${translateTransform} ${rotateTransform} ${scaleTransform}`;
     window.requestAnimationFrame(tick);
 }
@@ -72,7 +63,6 @@ function angle(e, element) {
     // Posição do mouse relativa ao container
     const mouseX = e.clientX - rect.left;
     const mouseY = e.clientY - rect.top;
-
     // Multiplica para controlar a intensidade da rotação
     const xRotation = (mouseX / rect.width) * Math.PI * 0.2; // Inclina para frente/trás
     const zRotation = (mouseY / rect.height) * Math.PI * 0.2;  // Gira para os lados
